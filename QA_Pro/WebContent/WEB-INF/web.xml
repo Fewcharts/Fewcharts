@@ -172,7 +172,7 @@
 
     <servlet-mapping>
         <servlet-name>MainMenu</servlet-name>
-        <url-pattern>/fbhome</url-pattern>
+        <url-pattern>/MainMenu</url-pattern>
     </servlet-mapping>
     
     <servlet>

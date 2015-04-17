@@ -13,11 +13,13 @@
 
 <head>
 
-<meta property="og:title" content="${question.text}" />
+<meta property="og:title" content="Fewcharts.com - chart everything now!" />
 <meta property="og:type" content="company" />
-<meta property="og:url" content="http://www.fewcharts.com/" />
-<meta property="og:image" content="http://i60.tinypic.com/zyd7qu.png&text=Fewcharts" />
-<meta property="og:site_name" content="Pippppooooo" />
+<meta property="og:url" content="http://www.fewcharts.com/DisplayQuestion?qId="${question.id}/>
+<meta property="og:image" content="assets/img/banner 1024x1024.png" />
+<meta property="og:site_name" content="Fewcharts" />
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/fewchartsfavicon.ico">
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">

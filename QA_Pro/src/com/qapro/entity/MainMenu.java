@@ -54,7 +54,7 @@ public class MainMenu extends HttpServlet {
 					
 			connection = DBConnectionUtil.getConnection();
 					
-			String useremailCountSql = "SELECT user_name, name, role_name, is_active, user_id from user where email = ? ";
+			String useremailCountSql = "SELECT user_name, name, role_name, is_active, user_id from heroku_f7be13520b27e62.user where email = ? ";
 			emailCountStatement = connection.prepareStatement(useremailCountSql);
 			
 			emailCountStatement.setString(1, fbProfileData.get("email"));
@@ -80,7 +80,7 @@ public class MainMenu extends HttpServlet {
 				memberInfo.setMemberRole(role_name);
 				memberInfo.setUserId(userId);
 				
-				System.out.println("cicccccccia");
+				System.out.println(" l'utente matcha con quelli nel database");
 				req.getSession(true);
 				req.getSession().setAttribute("memberInfo", memberInfo);
 				req.getSession().setAttribute("userId", memberInfo.getUserId());
@@ -92,7 +92,7 @@ public class MainMenu extends HttpServlet {
 		
 		if(count1 == 0){	
 			
-			String userInsertSql = "INSERT INTO user "
+			String userInsertSql = "INSERT INTO heroku_f7be13520b27e62.user "
 					+	"(user_name, password, is_active, name, surname, email, insert_date)"
 					+	" VALUES (?, ?, ?, ?,?,?, ?)";
 			
@@ -124,7 +124,7 @@ public class MainMenu extends HttpServlet {
 			
 			String key = new Date().getTime()+"";
 			
-			String emailValidationInsertSql = "INSERT INTO qapro.email_validation"
+			String emailValidationInsertSql = "INSERT INTO heroku_f7be13520b27e62.email_validation"
 					+" (validation_code,email,is_validated,insert_date,validation_date)"
 					+" VALUES	(?,?,?,?,?)";
 			PreparedStatement validationStatement = connection.prepareStatement(emailValidationInsertSql);

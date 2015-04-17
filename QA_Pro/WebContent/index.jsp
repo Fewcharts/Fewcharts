@@ -12,7 +12,7 @@
 <meta property="og:title" content="Fewcharts - chart everything now!" />
 <meta property="og:type" content="company" />
 <meta property="og:url" content="http://www.fewcharts.com/" />
-<meta property="og:image" content="http://i60.tinypic.com/zyd7qu.png&text=Fewcharts" />
+<meta property="og:image" content="assets/img/banner 1024x1024.png" />
 <meta property="og:site_name" content="Pippppooooo" />
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/fewchartsfavicon.ico">

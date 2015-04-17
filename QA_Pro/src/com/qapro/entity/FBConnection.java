@@ -14,7 +14,7 @@ import java.net.URLEncoder;
 public class FBConnection {
 	public static final String FB_APP_ID = "351486545042748";
 	public static final String FB_APP_SECRET = "ca3320bfcb0daefc2fc060979c0a90e3";
-	public static final String REDIRECT_URI = "http://www.fewcharts.com";
+	public static final String REDIRECT_URI = "http://www.fewcharts.com/MainMenu";
 
 	static String accessToken = "";
 
@@ -30,7 +30,6 @@ public class FBConnection {
 		}
 		return fbLoginUrl;
 	}
-
 	public String getFBGraphUrl(String code) {
 		String fbGraphUrl = "";
 		try {
