@@ -12,8 +12,10 @@
 <meta property="og:title" content="Fewcharts - chart everything now!" />
 <meta property="og:type" content="company" />
 <meta property="og:url" content="http://www.fewcharts.com/" />
-<meta property="og:image" content="assets/img/banner 1024x1024.png" />
-<meta property="og:site_name" content="Pippppooooo" />
+<meta property="og:image" content="http://www.fewcharts.com/assets/img/bannerfb1200x630.png" />
+<meta property="og:description" content= "Fewcharts is a ranking system focused mainly on music that allows you to find out who is the best. Through Fewcharts you can add your own preferences in 50 characters and create topic by voting with your friends. It's 100% free and will always be."/>
+
+<meta property="og:site_name" content="http://www.fewcharts.com" />
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/fewchartsfavicon.ico">
 

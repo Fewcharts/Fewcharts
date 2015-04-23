@@ -13,13 +13,15 @@
 
 <head>
 
-<meta property="og:title" content="Fewcharts.com - chart everything now!" />
+<meta property="og:title" content='${Text}'/>
 <meta property="og:type" content="company" />
-<meta property="og:url" content="http://www.fewcharts.com/DisplayQuestion?qId="${question.id}/>
-<meta property="og:image" content="assets/img/banner 1024x1024.png" />
+<meta property="og:url" content='${Url}'/>" />                                                      													
+<meta property="og:image" content="http://www.fewcharts.com/assets/img/bannerfb1200x630.png" />
 <meta property="og:site_name" content="Fewcharts" />
+<meta property="og:description" content= "Fewcharts is a ranking system focused mainly on music that allows you to find out who is the best. Through Fewcharts you can add your own preferences in 50 characters and create topic by voting with your friends. It's 100% free and will always be."/>
 
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/fewchartsfavicon.ico">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/fewchartsfavicon.ico"/>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
@@ -125,7 +127,7 @@ function loadXMLDoc (voteType,aid){
        	
                    <li>
           
-<!--  far appare il logout in alto quando uno è loggato -->
+<!--  far appare il logout in alto quando uno Ã¨ loggato -->
                    
                    <c:choose>
   <c:when test="${not empty sessionScope.memberInfo.userName }">

@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href=index.jsp>Fewcharts.com</a> 
-         <!-- potremmo aggiungere un logo  -->
+         <!-- -->
         </div>
         
         <div class="navbar-collapse collapse">
