@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.qapro.entity.EmailValidation;
+import com.qapro.entity.MemberInfo;
 import com.qapro.entity.Question;
 import com.qapro.enums.VotingEnum;
 
@@ -42,6 +43,8 @@ public class QuestionDao extends JavathlonJdbcTemplate<Question>{
 		else return null;
 		
 	}
+	
+	
 	
 	public List<Question> getQuestion()
 	{

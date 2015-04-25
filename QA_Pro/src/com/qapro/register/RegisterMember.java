@@ -194,7 +194,6 @@ public class RegisterMember extends HttpServlet {
 							        content +=	linkdacliccare;
 							        content += " " ;
 							        content += "Your Fewcharts team";
-							        
 							        String resultMessage = "";
 							 
 							        try {

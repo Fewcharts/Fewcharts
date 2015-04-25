@@ -12,10 +12,11 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 
 <meta property="og:title" content='${Text}'/>
-<meta property="og:type" content="company" />
-<meta property="og:url" content='${Url}'/>" />                                                      													
+<meta property="og:type" content="website" />
+<meta property="og:url" content='${Url}'/>                                                      													
 <meta property="og:image" content="http://www.fewcharts.com/assets/img/bannerfb1200x630.png" />
 <meta property="og:site_name" content="Fewcharts" />
 <meta property="og:description" content= "Fewcharts is a ranking system focused mainly on music that allows you to find out who is the best. Through Fewcharts you can add your own preferences in 50 characters and create topic by voting with your friends. It's 100% free and will always be."/>
@@ -24,7 +25,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/fewchartsfavicon.ico"/>
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Fewcharts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -123,6 +123,11 @@ function loadXMLDoc (voteType,aid){
                 
               </ul>
             </li>
+            <ul class="nav navbar-nav navbar-right">
+          <li>
+                        <a href="topic.jsp">New Chart</a>
+                    </li>                
+       
     
        	
                    <li>
@@ -132,13 +137,24 @@ function loadXMLDoc (voteType,aid){
                    <c:choose>
   <c:when test="${not empty sessionScope.memberInfo.userName }">
  <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                    </li>
+                    </ul>
                     <li>
                         <a href="Logout">Logout</a>
                     </li>
+                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="DisplayAllQuestions">Home</a>
                     </li>
+                     </ul>
+                
+             </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            
 </c:when>
   <c:otherwise>
    <ul class="nav navbar-nav navbar-right">
@@ -154,11 +170,7 @@ function loadXMLDoc (voteType,aid){
 
  
                    
-   <ul class="nav navbar-nav navbar-right">
-          <li>
-                        <a href="topic.jsp">New Chart</a>
-                    </li>                
-       
+   
        
         </div><!--/.nav-collapse -->
       

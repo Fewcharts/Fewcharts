@@ -46,12 +46,12 @@ public class Email {
         Message msg = new MimeMessage(session);
         msg.setContent(message, "text/html");
         msg.setFrom(new InternetAddress(userName));
-        InternetAddress[] toAddresses = { new InternetAddress(toAddress) };
+        InternetAddress[] toAddresses = { new InternetAddress(toAddress) } ;
         msg.setRecipients(Message.RecipientType.TO, toAddresses);
         msg.setSubject(subject);
         msg.setSentDate(new Date());
         msg.setText(message);
- 
+
         // sends the e-mail
         Transport.send(msg);
  

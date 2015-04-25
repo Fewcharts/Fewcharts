@@ -54,14 +54,12 @@ public GlobalData getTextQuestions(){
 		return questions;
 	}
 
-public Question getQuestionById(Long id){
+public Question getTextQuestionById2(Long questionId){
 	
 	
-	Question questionText = (questionDao.getQuestionById(id));
-	System.out.println(questionText);
-
-	return questionText;
+	Question question = questionDao.getQuestionById(questionId);
 	
+	return question;
 }
 
 

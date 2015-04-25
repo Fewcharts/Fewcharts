@@ -30,16 +30,15 @@ public class DisplayQuestion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String questionId = request.getParameter("qId");
-		
+		String questionText = request.getParameter("");
+
 		QuestionService questionService = new QuestionService();
 		Question question = null;
-		Question text = null;
 		try{
 			Long questionIdLong =  0L;
 			if(questionId != null)
 					questionIdLong = Long.parseLong(questionId);
 					question = questionService.getQuestionAndAnswers(questionIdLong);
-					text = questionService.getQuestionById(questionIdLong);
 			}
 			
 		catch(Exception e){
@@ -48,7 +47,7 @@ public class DisplayQuestion extends HttpServlet {
 		
 		request.setAttribute("question", question);
 		request.setAttribute("Url", "http://www.fewcharts.com/DisplayQuestion?qId=" + questionId);
-		request.setAttribute("Text", text);
+		request.setAttribute("Text", question.getText());
 
 		request.getRequestDispatcher("/displayQuestion2.jsp").forward(request, response);
 		

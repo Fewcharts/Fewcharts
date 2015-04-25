@@ -9,10 +9,10 @@
 <html>
 <head>
 
-<meta property="og:title" content="Fewcharts - chart everything now!" />
+<meta property="og:title" content="Fewcharts - chart everything now!"/>
 <meta property="og:type" content="company" />
-<meta property="og:url" content="http://www.fewcharts.com/" />
-<meta property="og:image" content="http://www.fewcharts.com/assets/img/bannerfb1200x630.png" />
+<meta property="og:url" content="http://www.fewcharts.com/"/>
+<meta property="og:image" content="http://www.fewcharts.com/assets/img/bannerfb1200x630.png"/>
 <meta property="og:description" content= "Fewcharts is a ranking system focused mainly on music that allows you to find out who is the best. Through Fewcharts you can add your own preferences in 50 characters and create topic by voting with your friends. It's 100% free and will always be."/>
 
 <meta property="og:site_name" content="http://www.fewcharts.com" />
@@ -78,13 +78,20 @@
                    <c:choose>
   <c:when test="${not empty sessionScope.memberInfo.userName }">
  <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                    </li>
+                    </ul>
                     <li>
                         <a href="Logout">Logout</a>
                     </li>
+                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="DisplayAllQuestions">Home</a>
                     </li>
+                     </ul>
 </c:when>
   <c:otherwise>
    <ul class="nav navbar-nav navbar-right">
