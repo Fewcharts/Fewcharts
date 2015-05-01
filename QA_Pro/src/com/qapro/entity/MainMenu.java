@@ -27,9 +27,9 @@ public class MainMenu extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String code="";
 
-	public void service(HttpServletRequest req, HttpServletResponse res)
+	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {		
-		code = req.getParameter("code");
+		code = request.getParameter("code");
 		
 		if (code == null || code.equals("")) {
 			throw new RuntimeException(
@@ -41,7 +41,7 @@ public class MainMenu extends HttpServlet {
 		FBGraph fbGraph = new FBGraph(accessToken);
 		String graph = fbGraph.getFBGraph();
 		Map<String, String> fbProfileData = fbGraph.getGraphData(graph);
-		ServletOutputStream out = res.getOutputStream();
+		ServletOutputStream out = response.getOutputStream();
 		
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -81,11 +81,11 @@ public class MainMenu extends HttpServlet {
 				memberInfo.setUserId(userId);
 				
 				System.out.println(" l'utente matcha con quelli nel database");
-				req.getSession(true);
-				req.getSession().setAttribute("memberInfo", memberInfo);
-				req.getSession().setAttribute("userId", memberInfo.getUserId());
-				res.sendRedirect("DisplayAllQuestions");
-					
+				request.getSession(true);
+				request.getSession().setAttribute("memberInfo", memberInfo);
+				request.getSession().setAttribute("userId", memberInfo.getUserId());
+				response.sendRedirect("index.jsp");
+
 	}
 			
 		
@@ -115,10 +115,10 @@ public class MainMenu extends HttpServlet {
 			
 			if(affectedRowCount > 0)
 				{
-				req.getSession().setAttribute("user", fbProfileData.get("first_name"));
+				request.getSession().setAttribute("user", fbProfileData.get("first_name"));
 				
 				//AGGIUNTO  DA ME PER fissare lo userid da utilizzare quando inserisco question
-				req.getSession().setAttribute("autoIncrementedUserId", autoIncrementedUserId);
+				request.getSession().setAttribute("autoIncrementedUserId", autoIncrementedUserId);
 				}
 			
 			
@@ -136,8 +136,10 @@ public class MainMenu extends HttpServlet {
 			validationStatement.executeUpdate();
 			connection.commit();
 		
-		
-			res.sendRedirect("DisplayAllQuestions");
+			request.getSession().setAttribute("memberInfo", memberInfo);
+			request.getSession().setAttribute("userId", memberInfo.getUserId());
+
+			response.sendRedirect("topic.jsp");
 			
 	
 			

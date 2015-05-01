@@ -131,6 +131,7 @@
     <servlet-name>Logout</servlet-name>
     <url-pattern>/Logout</url-pattern>
   </servlet-mapping>
+   <description></description>
   
   <servlet>
     <description></description>

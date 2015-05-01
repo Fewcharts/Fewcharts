@@ -34,6 +34,32 @@
 
 <body>
 
+<script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '351486545042748',
+          xfbml      : true,
+          version    : 'v2.2'
+        });
+      };
+      FB.logout(function(response) {
+    	  // user is now logged out
+    	});
+      deauth = function(){
+          FB.api('/me/permissions', 'DELETE', function(response){
+        	  console.log(response);
+            });
+            
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+<script src="https://connect.facebook.net/en_US/all.js"></script>
+
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -69,20 +95,21 @@
        	
                    <li>
                    <c:choose>
-  <c:when test="${not empty sessionScope.memberInfo.userName }">
+   <c:when test="${not empty sessionScope.memberInfo.userName }">
  <ul class="nav navbar-nav navbar-right">
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
                     </li>
                     </ul>
                     <li>
                         <a href="Logout">Logout</a>
                     </li>
-                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="DisplayAllQuestions">Home</a>
+                        <a href="Logout" onclick="deauth();">Logout2</a>
+                    </li>  
+                    <li>
+                        <a href="Logout" onclick="FB.logout();">Logout3</a>
                     </li>
                      </ul>
 </c:when>

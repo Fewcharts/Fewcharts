@@ -67,20 +67,15 @@
        	
                    <li>
                    <c:choose>
-  <c:when test="${not empty sessionScope.memberInfo.userName }">
+    <c:when test="${not empty sessionScope.memberInfo.userName }">
  <ul class="nav navbar-nav navbar-right">
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
                     </li>
                     </ul>
                     <li>
                         <a href="Logout">Logout</a>
-                    </li>
-                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="DisplayAllQuestions">Home</a>
                     </li>
                      </ul>
 </c:when>
