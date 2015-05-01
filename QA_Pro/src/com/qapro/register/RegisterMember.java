@@ -188,12 +188,17 @@ public class RegisterMember extends HttpServlet {
 							   if (email != null){
 								   
 							        String subject = "Validate your email";
-							        String content = "Ciao ";
-							        content += "To validate your email please copy and paste the following link on your web browser ";
+							        String content = "Ciao, ";
+							        content += "to validate your email please copy and paste the following link on your web browser ";
 							        content += " " ;
 							        content +=	linkdacliccare;
 							        content += " " ;
-							        content += "Your Fewcharts team";
+							        content += " ";
+							        content += "Your password is:";
+							        content +=	password;
+							       
+							        
+
 							        String resultMessage = "";
 							 
 							        try {

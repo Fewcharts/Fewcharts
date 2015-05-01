@@ -154,9 +154,12 @@ public class CheckLogin extends HttpServlet {
 		} catch (PropertyVetoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}}}
+		}}
 		
-		
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+ throws ServletException,IOException{
+
+}}
 		
 			
 

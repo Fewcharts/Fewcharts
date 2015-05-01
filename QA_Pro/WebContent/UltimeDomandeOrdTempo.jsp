@@ -136,7 +136,7 @@
 
 
 
-                        <h4><span style="color: #333333"> Last charts: </span></h4>
+                        <h4><span style="color: #333333"> Latest charts: </span></h4>
                         <p>	
  
 		
@@ -152,18 +152,9 @@
                         
                     </div>
 
-	<c:if test="${not empty sessionScope.memberInfo.userName }" >
 	
-	<ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="Logout.java">Logout</a>
-                    </li>
-	 <form class="form-signin"action="Logout" method="POST">
-        
-<button class="btn btn-lg btn-primary btn-block" type="submit">Logout</button>
 
-</form>
-</c:if>	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>			
 </body>

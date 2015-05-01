@@ -45,7 +45,7 @@ public class DisplayAllQuestions extends HttpServlet {
 					userIdLong = userId; //Long.parseLong(userId);
 					user = memberService.getUserAndQuestions(userIdLong);	
 					request.setAttribute("user", user);
-					request.getRequestDispatcher("/memberhome.jsp").forward(request,
+					request.getRequestDispatcher("memberhome.jsp").forward(request,
 							response);	
 			}
 			else {

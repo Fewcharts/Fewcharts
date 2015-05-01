@@ -39,6 +39,7 @@
     <servlet-name>CheckLogin</servlet-name>
     <url-pattern>/CheckLogin</url-pattern>
   </servlet-mapping>
+ 
   <servlet>
     <description></description>
     <display-name>CheckUtenteLoggato</display-name>

@@ -104,7 +104,7 @@
 <input type="text" id="text" name="email" class="form-control" placeholder="Email" required autofocus>
 
 <label for="Name" class="sr-only">Name</label>
-<input type="text" id="text" name="name"  class="form-control" placeholder="Name" required autofocus>
+<input type="text" id="text" name="name"  class="form-control" placeholder="Birth date dd/mm/yy" required autofocus>
 
 <label for="Surname" class="sr-only">Surname</label>
 <input type="text" id="text" name="surname"  class="form-control" placeholder="Surname" required autofocus>

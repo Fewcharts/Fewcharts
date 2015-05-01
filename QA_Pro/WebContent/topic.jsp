@@ -105,12 +105,7 @@
                     <li>
                         <a href="Logout">Logout</a>
                     </li>
-                    <li>
-                        <a href="Logout" onclick="deauth();">Logout2</a>
-                    </li>  
-                    <li>
-                        <a href="Logout" onclick="FB.logout();">Logout3</a>
-                    </li>
+                    
                      </ul>
 </c:when>
   <c:otherwise>
