@@ -1,5 +1,6 @@
 # gitignore for Fewcharts
 
+/build/
 *.properties
 .DS_Store
 
