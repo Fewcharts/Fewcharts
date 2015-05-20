@@ -9,7 +9,6 @@
    <dependency>
 	<groupId>org.json</groupId>
 	<artifactId>json</artifactId>
-	<version>20141113</version>
 	
 </dependency>
 
@@ -50,4 +49,13 @@
       </plugin>
     </plugins>
   </build>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.json</groupId>
+  			<artifactId>json</artifactId>
+  			<version>20141113</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>

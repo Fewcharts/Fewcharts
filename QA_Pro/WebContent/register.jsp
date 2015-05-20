@@ -94,7 +94,7 @@
 <div class="container">
 <div class="col-sm-4">
       <form class="form-signin"action="RegisterMember" method="POST">
-        <h2 class="form-signin-heading">Please Register</h2>
+        <h2 class="form-signin-heading">Register now in 1 easy step!</h2>
   
 
 <label for="UserName" class="sr-only">Username</label>
@@ -128,9 +128,12 @@
 
 <br></br>
 
+<br></br>
+
 		<a href="<%=fbConnection.getFBAuthUrl()%>"> <img
 			style="margin-top: 0px;" src="assets/img/Se.png" />
 		</a>
+	
 		
 <p>or go to  <a href="login.jsp">Login page</a></p>
 

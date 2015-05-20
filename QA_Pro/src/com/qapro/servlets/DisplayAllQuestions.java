@@ -43,7 +43,8 @@ public class DisplayAllQuestions extends HttpServlet {
 			
 			if(userId != null){
 					userIdLong = userId; //Long.parseLong(userId);
-					user = memberService.getUserAndQuestions(userIdLong);	
+					user = memberService.getUserAndQuestions(userIdLong);
+					System.out.println ("ho selezionato domande e risposte e poi dovrei andare su memberhome");
 					request.setAttribute("user", user);
 					request.getRequestDispatcher("memberhome.jsp").forward(request,
 							response);	

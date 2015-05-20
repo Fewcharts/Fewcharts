@@ -122,7 +122,7 @@ public class inseriscirisposta extends HttpServlet {
 							   String MailAsker = rs.getString(1);
 							   System.out.println (rs.getString(1));
 						        String subject = "You just received a reply on Fewcharts";
-						        String content = "go to your profile on Fewcharts and discover who's the new n.1 http://www.fewcharts.com";
+						        String content = " Your topic just received a reply on Fewcharts. Discover who's the new n.1 http://www.fewcharts.com";
 						 
 						        String resultMessage = "";
 						 

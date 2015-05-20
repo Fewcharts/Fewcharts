@@ -34,6 +34,65 @@
 
 <body>
 
+<div id="fb-root"></div>
+   <script>
+   
+   
+var AccessToken;
+
+window.fbAsyncInit = function() {
+FB.init({
+        appId: '351486545042748',
+        xfbml: true, //for parsing social plugins
+        status: true, //for getting user status
+        cookie: true, //save cookie
+        version:'v2.0' //version of graph API
+      });
+    
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+FB.logout(function(response) {
+	  FB.Auth.setAuthResponse(null, 'unknown');
+	  setTimeout('document.location.reload()',0);
+
+	});
+};
+
+(function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+
+
+  //checking login status of user
+ function statusChangeCallback(response) {
+ 
+        if(response && response.status == 'connected') {
+          alert('User is authorized');
+         AccessToken = response.authResponse.accessToken; //Get the user access token from the auth                         //response
+         console.log('Welcome!  Fetching your information.... ');
+         FB.api('/me', function(response) {
+               console.log('Good to see you, ' + response.name + '.' +  response.id);
+         });
+         console.log(AccessToken);
+       } else {
+         alert('User is not authorized');
+       }
+}
+
+ function checkLoginState() {
+     FB.getLoginStatus(function(response) {
+       statusChangeCallback(response);  });
+   }
+</script>
+   
+
+
+
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -75,7 +134,7 @@
                     </li>
                     </ul>
                     <li>
-                        <a href="Logout">Logout</a>
+                       <a href="Logout" onclick="FB.logout();">Logout</a>
                     </li>
                      </ul>
         </c:if>

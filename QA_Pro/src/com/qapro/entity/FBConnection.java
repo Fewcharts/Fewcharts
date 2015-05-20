@@ -52,6 +52,12 @@ public class FBConnection {
 				e.printStackTrace();
 				throw new RuntimeException("Invalid code received " + e);
 			}
+			
+//per il logout dobbiamo aggiungere un metodo qua  del tipo setaccesstoken
+			
+			
+			
+			
 			URLConnection fbConnection;
 			StringBuffer b = null;
 			try {

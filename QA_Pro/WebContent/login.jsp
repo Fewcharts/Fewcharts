@@ -44,6 +44,8 @@
 
 <body>
    
+   
+   
               
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -122,14 +124,15 @@
 </c:if>
 <br> </br>
 
-
-		<a href="<%=fbConnection.getFBAuthUrl()%>"> <img
+<a href="<%=fbConnection.getFBAuthUrl()%>"> <img
 			style="margin-top: 0px;" src="assets/img/Se.png" />
 		</a>
-	
 
-<br></br>
-<p>or go to  <a href="register.jsp">Registration page</a></p>
+<br> </br>
+
+
+
+<p>or <a href="register.jsp">Registration now</a> in 1 easy step!</p>
 <p>Did you <a href="passreq.jsp">Forget your password?</a></p>
 
 <!-- Footer -->

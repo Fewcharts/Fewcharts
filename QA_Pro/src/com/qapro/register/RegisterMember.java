@@ -69,6 +69,13 @@ public class RegisterMember extends HttpServlet {
 		String username = request.getParameter("username");
 		String Conditions = request.getParameter("Conditions");
 
+		if(name == null || surname == null || email == null || password == null || username == null){					
+			request.getSession().setAttribute("message",  " please don't leave blank space into parameters");
+			response.sendRedirect("register.jsp");							
+			return;
+		}				
+		
+		
 		System.out.println(name +" "+surname+" "+ email+ " "+password);
 		
 		if (Conditions != null){

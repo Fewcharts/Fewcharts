@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qapro.entity.FBConnection;
 import com.qapro.entity.MemberInfo;
 import com.qapro.util.DBConnectionUtil;
 
@@ -36,6 +37,14 @@ public class Logout extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	
+		// qua bisogna aggiungere un metodo 
+
+		//FBConnection fbConnection = new FBConnection();
+		
+		//String accessToken = fbConnection.setAccessToken("");
+
+		
+		
 		request.getSession().invalidate();
 		
 		response.sendRedirect("login.jsp");

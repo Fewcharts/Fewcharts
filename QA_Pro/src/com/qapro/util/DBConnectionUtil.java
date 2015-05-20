@@ -17,13 +17,14 @@ public class DBConnectionUtil {
 			
 			dataSource = new ComboPooledDataSource();
 			dataSource.setDriverClass("com.mysql.jdbc.Driver");
-			dataSource.setJdbcUrl("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_f7be13520b27e62?reconnect=true");
+			dataSource.setJdbcUrl("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_f7be13520b27e62?autoReconnect=true");
 			dataSource.setUser("bdff44960ec18e");
 			dataSource.setPassword("d5eb5e39");
-
 			
-			dataSource.setMinPoolSize(5);
-			dataSource.setMaxPoolSize(20);
+			dataSource.setMaxIdleTime(180);
+		
+			dataSource.setMinPoolSize(1);
+			dataSource.setMaxPoolSize(16);
 			
 		}
 		return dataSource;

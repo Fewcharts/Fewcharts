@@ -72,24 +72,7 @@ public class CheckLogin extends HttpServlet {
 				
 					System.out.println("Login is successful");	
 					
-					String getPermissionSql = " SELECT permission_name, is_active FROM heroku_f7be13520b27e62.role_permission where role_name = ?";
 					
-					PreparedStatement priviligesStatement = con.prepareStatement(getPermissionSql);
-					
-					priviligesStatement.setString(1, role_name);
-					
-					ResultSet priviligesResult = priviligesStatement.executeQuery();
-					
-					
-					ArrayList<String> permissionList = new ArrayList<String>();
-					while(priviligesResult.next()){
-						String priviligeName = priviligesResult.getString(1);
-						boolean isActivePermission = priviligesResult.getBoolean(2);
-						if(isActivePermission)
-							permissionList.add(priviligeName);
-						
-					}
-					memberInfo.setPrivileges(permissionList);
 									
 				}
 				
@@ -135,7 +118,7 @@ public class CheckLogin extends HttpServlet {
 			System.out.println("Please activate your membership");
 		}
 		else{
-			System.out.println("cicccccccia");
+			System.out.println("adesso fisso la session con member info e la user id e poi dovresti andare su memberhome");
 			request.getSession(true);
 			
 			request.getSession().setAttribute("memberInfo", memberInfo);

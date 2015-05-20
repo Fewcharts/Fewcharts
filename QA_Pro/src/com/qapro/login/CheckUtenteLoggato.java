@@ -96,11 +96,10 @@ public class CheckUtenteLoggato extends HttpServlet {
 					ResultSet rs = null;
 					int id = -1;
 					
-					response.sendRedirect("DisplayAllQuestions");	
 					
 		// ANDAVA FATTO UN ALTRO TRY!!			
 					try {
-					   pstmt = connection.prepareStatement("SELECT MAX(id) maxvalue FROM heroku_f7be13520b27e62.question WHERE asker_id = ?");
+					   pstmt = connection.prepareStatement("SELECT MAX(id) FROM heroku_f7be13520b27e62.question WHERE asker_id = ?");
 					   pstmt.setLong(1, userid);
 
 					   rs = pstmt.executeQuery();

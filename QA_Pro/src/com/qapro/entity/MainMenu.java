@@ -37,6 +37,7 @@ public class MainMenu extends HttpServlet {
 		}
 		FBConnection fbConnection = new FBConnection();
 		String accessToken = fbConnection.getAccessToken(code);
+		
 
 		FBGraph fbGraph = new FBGraph(accessToken);
 		String graph = fbGraph.getFBGraph();
