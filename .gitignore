@@ -1,7 +1,7 @@
 # gitignore for Fewcharts
 
 /build/
-*.properties
+config.properties
 .DS_Store
 
 # gitignore from github/gitignore
