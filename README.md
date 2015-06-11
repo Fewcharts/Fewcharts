@@ -22,7 +22,8 @@ Fewcharts is a ranking system focused mainly on music that allows you to find ou
 #Configurazione
 - copiare il file default.config.properties in config.properties
 - impostare tutti i parametri del config.properties
-- impostare il parametro di avvio della virtual machine `-Dfewcharts.config.path="/path/to/config.properties"`
+- impostare il parametro di avvio della virtual machine 
+  `-Dfewcharts.config.path="/path/to/config.properties"`
 
 #Come contribuire (tratto da https://help.github.com/articles/fork-a-repo/ ):
 - fork del progetto su github.com
