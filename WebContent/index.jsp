@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Fewcharts.com</a> 
+          <a class="navbar-brand" href="#">Fewcharts.com friocione frocione </a> 
          <!-- potremmo aggiungere un logo  -->
         </div>
         
