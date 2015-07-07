@@ -38,3 +38,8 @@ Fewcharts is a ranking system focused mainly on music that allows you to find ou
   - `git checkout master`
   - `git merge upstream/master`
 - mandare la pull request su github.com
+
+#Come deployare su heroku:
+- aprire il terminale
+  - `git checkout heroku_deploy`
+  - `git push heroku heroku_deploy:master`
