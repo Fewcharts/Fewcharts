@@ -40,6 +40,7 @@ Fewcharts is a ranking system focused mainly on music that allows you to find ou
 - mandare la pull request su github.com
 
 #Come deployare su heroku:
+- vedi https://devcenter.heroku.com/articles/java-webapp-runner
 - aprire il terminale
   - `git checkout heroku_deploy`
   - `git push heroku heroku_deploy:master`
