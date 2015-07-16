@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Fewcharts.com luchi frocione provone 22222</a> 
+          <a class="navbar-brand" href="#">Fewcharts.com luchi frocione provone 333</a> 
          <!-- potremmo aggiungere un logo  -->
         </div>
         
