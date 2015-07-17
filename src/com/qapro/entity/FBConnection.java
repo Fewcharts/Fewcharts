@@ -1,5 +1,3 @@
-
-
 package com.qapro.entity;
 
 import java.io.BufferedReader;
@@ -30,6 +28,7 @@ public class FBConnection {
 		}
 		return fbLoginUrl;
 	}
+
 	public String getFBGraphUrl(String code) {
 		String fbGraphUrl = "";
 		try {
@@ -52,12 +51,10 @@ public class FBConnection {
 				e.printStackTrace();
 				throw new RuntimeException("Invalid code received " + e);
 			}
-			
-//per il logout dobbiamo aggiungere un metodo qua  del tipo setaccesstoken
-			
-			
-			
-			
+
+			// per il logout dobbiamo aggiungere un metodo qua del tipo
+			// setaccesstoken
+
 			URLConnection fbConnection;
 			StringBuffer b = null;
 			try {

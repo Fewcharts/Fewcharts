@@ -7,23 +7,23 @@ import java.util.List;
 public class MemberInfo {
 
 	long userId;
-	
-	private Date registrationTime;	
-	
+
+	private Date registrationTime;
+
 	private String userName;
-	
+
 	private String password;
-	
+
 	private String name;
-	
+
 	private String surname;
-	
+
 	private String email;
-	
+
 	private String memberRole;
-	
+
 	private ArrayList<String> privileges;
-	
+
 	private List<Question> questions = new ArrayList<Question>();
 
 	public Date getRegistrationTime() {
@@ -97,15 +97,13 @@ public class MemberInfo {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public List<Question> getQuestions() {
 		return questions;
 	}
+
 	public void setQuestions(List<Question> questions) {
 		this.questions = questions;
 	}
-	
-	
-	
 	
 }

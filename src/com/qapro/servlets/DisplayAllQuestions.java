@@ -34,34 +34,31 @@ public class DisplayAllQuestions extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		Long userId = (Long) request.getSession().getAttribute("userId");
-		
+
 		MemberService memberService = new MemberService();
 		MemberInfo user = null;
-		
-		try{
-			Long userIdLong =  0L;
-			
-			if(userId != null){
-					userIdLong = userId; //Long.parseLong(userId);
-					user = memberService.getUserAndQuestions(userIdLong);
-					System.out.println ("ho selezionato domande e risposte e poi dovrei andare su memberhome");
-					request.setAttribute("user", user);
-					request.getRequestDispatcher("memberhome.jsp").forward(request,
-							response);	
-			}
-			else {
+
+		try {
+			Long userIdLong = 0L;
+
+			if (userId != null) {
+				userIdLong = userId; // Long.parseLong(userId);
+				user = memberService.getUserAndQuestions(userIdLong);
+				System.out
+						.println("ho selezionato domande e risposte e poi dovrei andare su memberhome");
+				request.setAttribute("user", user);
+				request.getRequestDispatcher("memberhome.jsp").forward(request,
+						response);
+			} else {
 				request.getRequestDispatcher("/login.jsp").forward(request,
 						response);
 			}
-			}
-		
-			
-		catch(Exception e){
-			
 		}
 
-		
-		
+		catch (Exception e) {
+
+		}
+
 	}
 
 	/**

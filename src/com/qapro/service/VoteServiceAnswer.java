@@ -12,33 +12,30 @@ import com.qapro.enums.VotingResult;
 
 public class VoteServiceAnswer {
 
-	
 	public VoteDaoAnswer voteDao = new VoteDaoAnswer();
-	
+
 	public AnswerDao answerDao = new AnswerDao();
-	
-	public VotingResult saveVote(Vote vote) throws Exception{
-		
-		Vote checkVote = voteDao.getVoteByAnswerIdAndUserId(vote.getAnswerId(), vote.getUserId());
-		
-		if(checkVote != null){
-			if(checkVote.getType() == VotingEnum.UP){
+
+	public VotingResult saveVote(Vote vote) throws Exception {
+
+		Vote checkVote = voteDao.getVoteByAnswerIdAndUserId(vote.getAnswerId(),
+				vote.getUserId());
+
+		if (checkVote != null) {
+			if (checkVote.getType() == VotingEnum.UP) {
 				return VotingResult.ALREADY_VOTED_UP;
-			}
-			else{
+			} else {
 				return VotingResult.ALREADY_VOTED_DOWN;
 			}
-		}	
-		
-		
+		}
+
 		voteDao.insertVote(vote);
 		answerDao.voteAnswer(vote.getAnswerId(), vote.getType());
-		
+
 		return VotingResult.VOTING_SUCCESSFULL;
 	}
-	
-	
-	public static void main(String args[]){
+
+	public static void main(String args[]) {
 		Vote vote = new Vote();
 		vote.setUserId(3L);
 		vote.setQuestionId(1L);
@@ -48,9 +45,9 @@ public class VoteServiceAnswer {
 		VoteService voteService = new VoteService();
 		VotingResult result = null;
 		try {
-			
+
 			result = voteService.saveVote(vote);
-			
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

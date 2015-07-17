@@ -13,42 +13,44 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 public class DBConnectionUtil {
 
-    private static ComboPooledDataSource dataSource;
+	private static ComboPooledDataSource dataSource;
 
-    private static ComboPooledDataSource getInstance()
-	    throws PropertyVetoException {
-	
-	Properties prop = new Properties();
-	InputStream input = null;
+	private static ComboPooledDataSource getInstance()
+			throws PropertyVetoException {
 
-	if (dataSource == null) {
-	    try {
-		input = new FileInputStream(System.getProperty("fewcharts.config.path") + File.separator + "config.properties");
-		prop.load(input);
-		
-		dataSource = new ComboPooledDataSource();
-		dataSource.setDriverClass(prop.getProperty("database.driver"));
-		dataSource
-			.setJdbcUrl(prop.getProperty("database.connectionURL"));
-		dataSource.setUser(prop.getProperty("database.user"));
-		dataSource.setPassword(prop.getProperty("database.password"));
+		Properties prop = new Properties();
+		InputStream input = null;
 
-		dataSource.setMaxIdleTime(180);
+		if (dataSource == null) {
+			try {
+				input = new FileInputStream(
+						System.getProperty("fewcharts.config.path")
+								+ File.separator + "config.properties");
+				prop.load(input);
 
-		dataSource.setMinPoolSize(1);
-		dataSource.setMaxPoolSize(16);
+				dataSource = new ComboPooledDataSource();
+				dataSource.setDriverClass(prop.getProperty("database.driver"));
+				dataSource.setJdbcUrl(prop
+						.getProperty("database.connectionURL"));
+				dataSource.setUser(prop.getProperty("database.user"));
+				dataSource.setPassword(prop.getProperty("database.password"));
 
-	    } catch (IOException ex) {
-		ex.printStackTrace();
-	    } finally {
-		if (input != null) {
-		    try {
-			input.close();
-		    } catch (IOException e) {
-			e.printStackTrace();
-		    }
-		}
-	    }
+				dataSource.setMaxIdleTime(180);
+
+				dataSource.setMinPoolSize(1);
+				dataSource.setMaxPoolSize(16);
+
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			} finally {
+				if (input != null) {
+					try {
+						input.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
 
 	}
 	return dataSource;
