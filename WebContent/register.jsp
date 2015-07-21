@@ -65,13 +65,13 @@
         
      
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLassifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a  href="SelectAllQuestion">All Charts</a>
+                                <a  href="SelectAllQuestion">Ultime Classifiche</a>
                             </li>
                             <li>
-                                <a href="SelectAllQuestionByDate">Latest Charts</a>
+                                <a href="SelectAllQuestionByDate">Le più votate</a>
                             </li>
                             
                 
@@ -92,10 +92,14 @@
     </div>
 
 <div class="container">
+
+<div class="col-sm-8">
+<h2 class="form-signin-heading">Registrati ora in un solo passaggio!</h2>
+ <h5 class="form-signin-heading">Entra a far parte della eslcusiva comunity di Fewcharts in soli 30 secondi. E' GRATIS e lo sarà sempre! Cosa Aspetti? </h5> 
 <div class="col-sm-4">
+
       <form class="form-signin"action="RegisterMember" method="POST">
-        <h2 class="form-signin-heading">Register now in 1 easy step!</h2>
-  
+        
 
 <label for="UserName" class="sr-only">Username</label>
 <input type="text" id="text" name="username"  class="form-control" placeholder="Username" required autofocus>
@@ -119,10 +123,10 @@
 </c:if>
 </br>
 
-<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Registrati</button>
 
 
-<input type="checkbox" name="Conditions" value="Conditions" > <a href="login.jsp"> Accept Terms & Conditions</a><BR>
+<input type="checkbox" name="Conditions" value="Conditions" > <a href="login.jsp"> Accetta i temrini e le condizioni</a><BR>
 
 </form>
 

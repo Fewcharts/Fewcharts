@@ -54,7 +54,7 @@
             
            
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Top rated</a></li>
                 <li><a href="#">Latest</a></li>
