@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Fewcharts.com friocione frocione </a> 
+          <a class="navbar-brand" href="#">Fewcharts.com </a> 
          <!-- potremmo aggiungere un logo  -->
         </div>
         
@@ -58,13 +58,13 @@
         
      
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a  href="SelectAllQuestion">All Charts</a>
+                                <a  href="SelectAllQuestion">Tutte le Classifiche</a>
                             </li>
                             <li>
-                                <a href="SelectAllQuestionByDate">Latest Charts</a>
+                                <a href="SelectAllQuestionByDate">Ultime Classifiche </a>
                             </li>
                             
                 
@@ -96,7 +96,7 @@
                     </li>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="register.jsp">Register</a>
+                        <a href="register.jsp">Registrati</a>
                     </li>
   </c:otherwise>
 </c:choose>
@@ -105,7 +105,7 @@
                    
    <ul class="nav navbar-nav navbar-right">
           <li>
-                        <a href="topic.jsp">New Chart</a>
+                        <a href="topic.jsp">Nuova Classifica</a>
                     </li>                
        
        
@@ -162,17 +162,17 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Find the n. 1 and vote now!
+                    Vota il tuo preferito ora!
                 </h1>
             </div>
              <!-- Call to Action Section -->
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
-                    <p>Fewcharts is a ranking system focused mainly on music that allows you to find out who is the best. Through Fewcharts you can add your own preferences in 50 characters and create topic by voting with your friends. It's 100% free and will always be.</p>
+                    <p>Fewcharts è un sistema di classifiche dove il vero protagonista sei tu! segui un programma televisivo e vota il tuo concorrente preferito o la tua canzone prefeita, scopri i voti e le classifiche degli altri, e crea le tue classifiche personali. E' 100% gratis e lo sarà sempre! Inizia subito!</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="topic.jsp">Start now!</a>
+                    <a class="btn btn-lg btn-default btn-block" href="topic.jsp">Crea la tua prima classifica!</a>
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>TKK - 2014</p>
-                    <p>For any inquiries fewcharts[at]gmail.com</p>
+                    <p>Per info fewcharts[at]gmail.com</p>
                 </div>
             </div>
               <ul class="list-unstyled list-inline list-social-icons">

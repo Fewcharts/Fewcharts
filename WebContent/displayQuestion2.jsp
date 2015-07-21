@@ -68,7 +68,7 @@ function loadXMLDoc (voteType,aid){
 					}				
 				}
 				else {
-					alert ('Your vote can not be saved if you are not logged in on Fewcharts. Please go to LOGIN or REGISTER page');
+					alert ('Il tuo voto non può essere salvato. Vai alla pagina di Login o di Registrazione');
 					window.location.href='http://www.fewcharts.com/login.jsp';
 				}
 			}
@@ -111,13 +111,13 @@ function loadXMLDoc (voteType,aid){
         
      
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a  href="SelectAllQuestion">All Charts</a>
+                                <a  href="SelectAllQuestion">Tutte le Classifiche</a>
                             </li>
                             <li>
-                                <a href="SelectAllQuestionByDate">Latest Charts</a>
+                                <a href="SelectAllQuestionByDate">Ultime Classifiche</a>
                             </li>
                             
                 
@@ -125,7 +125,7 @@ function loadXMLDoc (voteType,aid){
             </li>
             <ul class="nav navbar-nav navbar-right">
           <li>
-                        <a href="topic.jsp">New Chart</a>
+                        <a href="topic.jsp">Nuova Classifica</a>
                     </li>                
        
     
@@ -139,7 +139,7 @@ function loadXMLDoc (voteType,aid){
  <ul class="nav navbar-nav navbar-right">
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Loggato come ${sessionScope.memberInfo.userName} </a>
                     </li>
                     </ul>
                     <li>
@@ -155,7 +155,7 @@ function loadXMLDoc (voteType,aid){
                     </li>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="register.jsp">Register</a>
+                        <a href="register.jsp">Registrati</a>
                     </li>
   </c:otherwise>
 </c:choose>
@@ -179,12 +179,12 @@ function loadXMLDoc (voteType,aid){
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Topic
-                    <small>Tell to the world your opinion</small>
+                    <small>Qual'è la tua opinione? </small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Home</a>
                     </li>
-                    <li class="active">Topic</li>
+                    <li class="active">Classifica</li>
                 </ol>
             </div>
         </div>
@@ -239,7 +239,7 @@ function loadXMLDoc (voteType,aid){
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button id="submit" type="submit" class="btn btn-primary" >Send your opinion</button>      
+                    <button id="submit" type="submit" class="btn btn-primary" >Invia la tua opinione</button>      
                    </form>          
                     </div>
             </div>
@@ -253,7 +253,7 @@ function loadXMLDoc (voteType,aid){
 			<div class="media">
 			
    
-<span id= "${answer.id}"> <b>${answer.upVote} Votes</b> </span>
+<span id= "${answer.id}"> <b>${answer.upVote} Voti</b> </span>
 <button type= "button" onclick = "loadXMLDoc ('UP',${answer.id})"><span class="glyphicon glyphicon-hand-up"></span> </button>
  <p>
  <small><c:out value="added ${answer.insertDate}"></c:out></small>

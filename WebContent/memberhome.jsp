@@ -111,13 +111,13 @@ FB.logout(function(response) {
           <ul class="nav navbar-nav">
         
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLassifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a  href="SelectAllQuestion">All Charts</a>
+                                <a  href="SelectAllQuestion">Classifiche più votate</a>
                             </li>
                             <li>
-                                <a href="SelectAllQuestionByDate">Latest Charts</a>
+                                <a href="SelectAllQuestionByDate">Le Ultime Classifiche</a>
                             </li>
                             
               </ul>
@@ -154,10 +154,10 @@ FB.logout(function(response) {
 <br></br>
 
 <div class="panel-body">
-                        <h4><span style="color: #333333"> Your latest charts: </span></h4>
+                        <h4><span style="color: #333333"> Le tue ultime Classifiche: </span></h4>
                         <p>	
 <c:choose>
-	<c:when test="${user.userId eq null}"> There is no user with this id </c:when>
+	<c:when test="${user.userId eq null}"> NOn è registrato alcun user con questo id </c:when>
 
 	<c:otherwise>
 		
@@ -177,9 +177,9 @@ FB.logout(function(response) {
 </p>
              <c:if test="${ empty question.text }" >
 	
-	<small><h5>Insert new chart! Start now!  </h5>
-	<h5>insert new <a  href="topic.jsp"> charts</a></h5>
-		<h5> or vote  <a  href="SelectAllQuestionByDate"> old ones</a> </h5>
+	<small><h5>Inserisci una nuova classifica! ora! </h5>
+	<h5>inserisci una nuova <a  href="topic.jsp"> classifica</a></h5>
+		<h5> o vota <a  href="SelectAllQuestionByDate"> una classifica già esistente</a> </h5>
 	</small>
 
 </form>

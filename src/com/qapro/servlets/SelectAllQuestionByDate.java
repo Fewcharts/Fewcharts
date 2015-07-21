@@ -17,50 +17,52 @@ import com.qapro.service.QuestionService;
  */
 public class SelectAllQuestionByDate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public SelectAllQuestionByDate() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 * questo serve a far vederele domande e le risposte nella pagina topic 
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		QuestionService questionService = new QuestionService();
-		GlobalData question = null;
-		
-		try{
-			
-			
-					question = questionService.getTextQuestionsByDate();	
-		    		
-	
-		}
-			
-		catch(Exception e){
-			
-		}	
-		
-		for (Question q :  question.getQuestions())
-    	{
-    		System.out.println("3 - ");
-    		System.out.println(q.getText());
-    	}
-		request.setAttribute("questionbytime", question);
-		request.getRequestDispatcher("/UltimeDomandeOrdTempo.jsp").forward(request, response);
-		
+	public SelectAllQuestionByDate() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response) questo serve a far vederele domande e le risposte nella
+	 *      pagina topic
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		QuestionService questionService = new QuestionService();
+		GlobalData question = null;
+
+		try {
+
+			question = questionService.getTextQuestionsByDate();
+
+		}
+
+		catch (Exception e) {
+
+		}
+
+		for (Question q : question.getQuestions()) {
+			System.out.println("3 - ");
+			System.out.println(q.getText());
+		}
+		request.setAttribute("questionbytime", question);
+		request.getRequestDispatcher("/UltimeDomandeOrdTempo.jsp").forward(
+				request, response);
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 

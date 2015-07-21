@@ -49,15 +49,15 @@
      
           <ul class="nav navbar-nav">
         
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contatti</a></li>
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="portfolio-1-col.html">Ultime Charts</a>
+                                <a href="portfolio-1-col.html">Ultime Classifiche</a>
                             </li>
                             <li>
-                                <a href="portfolio-2-col.html">Le Più Votate</a>
+                                <a href="portfolio-2-col.html">Le Classifiche più Votate</a>
                             </li>
                             
                 <li class="dropdown-header">Nav header</li>
@@ -66,7 +66,7 @@
               </ul>
             </li>
     
-        <li><a href="topic.jsp">New Charts</a></li>	
+        <li><a href="topic.jsp">Nuova Classifica</a></li>	
                    
           
         </div><!--/.nav-collapse -->
@@ -77,7 +77,7 @@
 <div class="container">
 <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"> Your account is now verified go to <a href="login.jsp">Login</a> Page</h1>
+                <h1 class="page-header"> IL tuo account è ora verificato. Vai alla pgina di <a href="login.jsp">Login</a> </h1>
                     
 </div>
 <br></br>

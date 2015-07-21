@@ -66,20 +66,20 @@
         
      
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a  href="SelectAllQuestion">All Charts</a>
+                                <a  href="SelectAllQuestion">Classifiche più votate</a>
                             </li>
                             <li>
-                                <a href="SelectAllQuestionByDate">Latest Charts</a>
+                                <a href="SelectAllQuestionByDate">Ultime Classifiche</a>
                             </li>
                             
                 
               </ul>
             </li>
             <li>
-                        <a href="register.jsp">Register</a>
+                        <a href="register.jsp">Registrati</a>
                     </li>
           
         </div><!--/.nav-collapse -->
@@ -105,7 +105,7 @@
         <h2 class="form-signin-heading">Please sign in</h2>
   
 
-<label for="inputEmail" class="sr-only">Email address</label>
+<label for="inputEmail" class="sr-only">Inserisci il tuo indirizzo mail</label>
 <input type="text" id="text" name="email" email class="form-control" placeholder="Email address" required autofocus>
 
 <label for="inputPassword" class="sr-only">Password</label>
@@ -113,7 +113,7 @@
 
 <br>  
 
-<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Entra</button>
 
 
 	</form>
@@ -132,8 +132,8 @@
 
 
 
-<p>or <a href="register.jsp">Registration now</a> in 1 easy step!</p>
-<p>Did you <a href="passreq.jsp">Forget your password?</a></p>
+<p>or <a href="register.jsp">Resgitrati ora</a> in 5 secondi!</p>
+<p>Did you <a href="passreq.jsp">Hai dimenticato la tua password?</a></p>
 
 <!-- Footer -->
         <footer>

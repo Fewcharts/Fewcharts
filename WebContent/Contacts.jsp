@@ -60,13 +60,13 @@
         
      
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Charts <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a  href="SelectAllQuestion">All Charts</a>
+                                <a  href="SelectAllQuestion">Tutte le Classifiche</a>
                             </li>
                             <li>
-                                <a href="SelectAllQuestionByDate">Latest Charts</a>
+                                <a href="SelectAllQuestionByDate">Ultime Classifiche</a>
                             </li>
                             
                 
@@ -89,7 +89,7 @@
 <div class="container">
 <div class="col-sm-4">
       <form class="form-signin"action="RegisterMember" method="POST">
-        <h2 class="form-signin-heading">Contacts</h2>
+        <h2 class="form-signin-heading">Contatti</h2>
   
 
 <br></br>

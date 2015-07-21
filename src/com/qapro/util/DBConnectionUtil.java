@@ -13,31 +13,45 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 public class DBConnectionUtil {
 
-    private static ComboPooledDataSource dataSource;
+	private static ComboPooledDataSource dataSource;
 
-    private static ComboPooledDataSource getInstance()
-	    throws PropertyVetoException {
+	private static ComboPooledDataSource getInstance()
+			throws PropertyVetoException {
 
-        
+		Properties prop = new Properties();
+		InputStream input = null;
 
-	if (dataSource == null) {
-	    try {
-		
-		dataSource = new ComboPooledDataSource();
-		dataSource.setDriverClass(System.getenv().get("DATABASE_DRIVER"));
-		dataSource
-			.setJdbcUrl(System.getenv().get("DATABASE_CONNECTION_URL"));
-		dataSource.setUser(System.getenv().get("DATABASE_USER"));
-		dataSource.setPassword(System.getenv().get("DATABASE_PASSWORD"));
+		if (dataSource == null) {
+			try {
+				input = new FileInputStream(
+						System.getProperty("fewcharts.config.path")
+								+ File.separator + "config.properties");
+				prop.load(input);
 
-		dataSource.setMaxIdleTime(180);
+				dataSource = new ComboPooledDataSource();
+				dataSource.setDriverClass(prop.getProperty("database.driver"));
+				dataSource.setJdbcUrl(prop
+						.getProperty("database.connectionURL"));
+				dataSource.setUser(prop.getProperty("database.user"));
+				dataSource.setPassword(prop.getProperty("database.password"));
 
-		dataSource.setMinPoolSize(1);
-		dataSource.setMaxPoolSize(16);
+				dataSource.setMaxIdleTime(180);
 
-	    } catch (Exception ex) {
-		ex.printStackTrace();
-	    } 
+				dataSource.setMinPoolSize(1);
+				dataSource.setMaxPoolSize(16);
+
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			} finally {
+				if (input != null) {
+					try {
+						input.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
 	}
 	return dataSource;
     }
