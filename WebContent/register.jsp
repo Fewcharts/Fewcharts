@@ -93,12 +93,16 @@
 
 <div class="container">
 
-<div class="col-sm-8">
-<h2 class="form-signin-heading">Registrati ora in un solo passaggio!</h2>
- <h5 class="form-signin-heading">Entra a far parte della eslcusiva comunity di Fewcharts in soli 30 secondi. E' GRATIS e lo sarà sempre! Cosa Aspetti? </h5> 
-<div class="col-sm-4">
 
-      <form class="form-signin"action="RegisterMember" method="POST">
+
+<div class="col-sm-12">
+<h2 class="form-signin-heading">Registrati ora in un solo passaggio!</h2>
+ 
+ <h5 class="form-signin-heading">Entra a far parte della eslcusiva comunity di Fewcharts in soli 30 secondi. E' GRATIS e lo sarà sempre!</h5> 
+
+<br></br>      
+<div class="col-sm-4">
+<form class="form-signin"action="RegisterMember" method="POST">
         
 
 <label for="UserName" class="sr-only">Username</label>
@@ -126,9 +130,11 @@
 <button class="btn btn-lg btn-primary btn-block" type="submit">Registrati</button>
 
 
-<input type="checkbox" name="Conditions" value="Conditions" > <a href="login.jsp"> Accetta i temrini e le condizioni</a><BR>
+<input type="checkbox" name="Conditions" value="Conditions" > <a href="login.jsp"> Accetta i termini e le condizioni</a><BR>
 
 </form>
+
+
 
 <br></br>
 
@@ -162,6 +168,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
-    
+    </div>
+    <div class="col-sm-8">
+<h2> Perchè <em>amerai</em> Fewcharts? </h2>
+
+- Con Fewcharts hai accesso esclusivo a statistiche sulle preferenze degli utenti.
+<br></br>
+- Con Fewcharts puoi votare o far votare il migliore.
+<br></br>
+- Con Fewcharts puoi creare delle classifiche e farle votare ai tuoi amici. 
+   
+<h2> Registrati subito è GRATIS e  lo sarà sempre! </h2> 
 </body>
 </html>
