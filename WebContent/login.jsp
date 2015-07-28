@@ -102,11 +102,11 @@
 <div class="container">
 <div class="col-sm-4">
       <form class="form-signin"action="CheckLogin" method="POST">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">Inserisci le tue credenziali</h2>
   
 
 <label for="inputEmail" class="sr-only">Inserisci il tuo indirizzo mail</label>
-<input type="text" id="text" name="email" email class="form-control" placeholder="Email address" required autofocus>
+<input type="text" id="text" name="email" email class="form-control" placeholder="Email" required autofocus>
 
 <label for="inputPassword" class="sr-only">Password</label>
 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
@@ -132,8 +132,8 @@
 
 
 
-<p>or <a href="register.jsp">Resgitrati ora</a> in 5 secondi!</p>
-<p>Did you <a href="passreq.jsp">Hai dimenticato la tua password?</a></p>
+<p>o <a href="register.jsp">Registrati ora</a> in 5 secondi!</p>
+<p> <a href="passreq.jsp">Hai dimenticato la tua password?</a></p>
 
 <!-- Footer -->
         <footer>

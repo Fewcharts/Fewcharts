@@ -102,6 +102,7 @@
 
 <br></br>      
 <div class="col-sm-4">
+<br></br>
 <form class="form-signin"action="RegisterMember" method="POST">
         
 
@@ -111,12 +112,6 @@
 <label for="Email" class="sr-only">Email</label>
 <input type="text" id="text" name="email" class="form-control" placeholder="Email" required autofocus>
 
-<label for="Name" class="sr-only">Name</label>
-<input type="text" id="text" name="name"  class="form-control" placeholder="Birth date dd/mm/yy" required autofocus>
-
-<label for="Surname" class="sr-only">Surname</label>
-<input type="text" id="text" name="surname"  class="form-control" placeholder="Surname" required autofocus>
-
 <label for="inputPassword" class="sr-only">Password</label>
 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
@@ -125,7 +120,8 @@
 <c:if test="${not empty message }">
 	<span style="color: #ff1100"> ${sessionScope.message} </span>
 </c:if>
-</br>
+
+
 
 <button class="btn btn-lg btn-primary btn-block" type="submit">Registrati</button>
 

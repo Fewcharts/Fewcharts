@@ -80,11 +80,11 @@
  <ul class="nav navbar-nav navbar-right">
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Loggato come ${sessionScope.memberInfo.userName} </a>
                     </li>
                     </ul>
                     <li>
-                        <a href="Logout">Logout</a>
+                        <a href="Logout">Essci</a>
                     </li>
                      </ul>
                     

@@ -53,10 +53,10 @@ public class RegisterMember extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name = request.getParameter("name");
-		String surname = request.getParameter("surname");
+		String username = request.getParameter("username");
+		
 
-		System.out.println(name + " " + surname);
+		System.out.println(username );
 	}
 
 	/**
@@ -66,22 +66,20 @@ public class RegisterMember extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		String name = request.getParameter("name");
-		String surname = request.getParameter("surname");
+		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String username = request.getParameter("username");
 		String Conditions = request.getParameter("Conditions");
 
-		if (name == null || surname == null || email == null
-				|| password == null || username == null) {
+		if ( email == null || password == null || username == null) {
 			request.getSession().setAttribute("message",
-					" please don't leave blank space into parameters");
+					" per favore compila tutti i parametri");
 			response.sendRedirect("register.jsp");
 			return;
 		}
 
-		System.out.println(name + " " + surname + " " + email + " " + password);
+		System.out.println( username + " " + email + " " + password);
 
 		if (Conditions != null) {
 
@@ -118,8 +116,8 @@ public class RegisterMember extends HttpServlet {
 
 				if (count > 0) {
 					request.getSession().setAttribute("message",
-							username + " user name has already been taken");
-					response.sendRedirect("index.jsp");
+							username + " il nome utente che hai scelto è già stato preso");
+					response.sendRedirect("register.jsp");
 					return;
 				}
 
@@ -138,9 +136,9 @@ public class RegisterMember extends HttpServlet {
 
 				if (count1 > 0) {
 					request.getSession().setAttribute("message",
-							email + " email has already been taken");
+							email + " questa email è già stata utilizzata, utilizzane un'altra");
 					response.sendRedirect("register.jsp");
-
+					return;
 				}
 
 				String userInsertSql = "INSERT INTO heroku_f7be13520b27e62.user "
@@ -153,8 +151,8 @@ public class RegisterMember extends HttpServlet {
 				preparedStatement.setString(1, username);
 				preparedStatement.setString(2, password);
 				preparedStatement.setBoolean(3, true);
-				preparedStatement.setString(4, name);
-				preparedStatement.setString(5, surname);
+				preparedStatement.setString(4, null);
+				preparedStatement.setString(5, null);
 				preparedStatement.setString(6, email);
 				preparedStatement.setTimestamp(7,
 						new Timestamp(new Date().getTime()));
@@ -178,7 +176,7 @@ public class RegisterMember extends HttpServlet {
 							autoIncrementedUserId);
 				} else {
 					request.getSession().setAttribute("message",
-							"A database error occurred");
+							"Ooops, c'è stato un errore prova a registrarti di nuovo! ");
 					response.sendRedirect("index.jsp");
 				}
 
@@ -211,14 +209,14 @@ public class RegisterMember extends HttpServlet {
 
 				if (email != null) {
 
-					String subject = "Validate your email";
+					String subject = "Convalida la tua email";
 					String content = "Ciao, ";
-					content += "to validate your email please copy and paste the following link on your web browser ";
+					content += "per convalidare la tua mail basta che copi ed incolli al posto dell'indirizzo il seguente link sul tuo browser ( Chrome, Mozilla, Explorer) ";
 					content += " ";
 					content += linkdacliccare;
 					content += " ";
 					content += " ";
-					content += "Your password is:";
+					content += "Ti ricordaimo che la tua password è:";
 					content += password;
 
 					String resultMessage = "";
@@ -271,7 +269,7 @@ public class RegisterMember extends HttpServlet {
 			}
 		} else {
 			request.getSession().setAttribute("message",
-					" Check Conditions box!!");
+					" Spunta il box relativo alle Condizioni!!");
 
 			response.sendRedirect("register.jsp");
 		}

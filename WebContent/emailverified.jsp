@@ -77,7 +77,7 @@
 <div class="container">
 <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"> IL tuo account è ora verificato. Vai alla pgina di <a href="login.jsp">Login</a> </h1>
+                <h1 class="page-header"> Il tuo account è ora verificato. Vai alla pagina di <a href="login.jsp">Login</a> </h1>
                     
 </div>
 <br></br>

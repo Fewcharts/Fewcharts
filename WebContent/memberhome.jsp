@@ -111,7 +111,7 @@ FB.logout(function(response) {
           <ul class="nav navbar-nav">
         
             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLassifiche <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifiche <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a  href="SelectAllQuestion">Classifiche più votate</a>
@@ -123,18 +123,18 @@ FB.logout(function(response) {
               </ul>
             </li>
     
-        <li><a href="topic.jsp">New Charts</a></li>	
+        <li><a href="topic.jsp">Inserisci Nuova Classifica</a></li>	
                    <li><c:if test="${not empty sessionScope.memberInfo.userName }" >
 	
 	<ul class="nav navbar-nav navbar-right">
    
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Logged in as ${sessionScope.memberInfo.userName} </a>
+                        <a href="DisplayAllQuestions" style="color: #F0FFFF">  Loggato come ${sessionScope.memberInfo.userName} </a>
                     </li>
                     </ul>
                     <li>
-                       <a href="Logout" onclick="FB.logout();">Logout</a>
+                       <a href="Logout" onclick="FB.logout();">Esci</a>
                     </li>
                      </ul>
         </c:if>
@@ -148,16 +148,16 @@ FB.logout(function(response) {
 <div class="container">
 <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Welcome
+                <h1 class="page-header">Benvenuto
                     <small><span style="color: #333333"> <b> ${sessionScope.memberInfo.userName} </b></span></small>
 </div>
 <br></br>
 
 <div class="panel-body">
-                        <h4><span style="color: #333333"> Le tue ultime Classifiche: </span></h4>
+                        <h4><span style="color: #333333"> Le tue attività: </span></h4>
                         <p>	
 <c:choose>
-	<c:when test="${user.userId eq null}"> NOn è registrato alcun user con questo id </c:when>
+	<c:when test="${user.userId eq null}"> Non è registrato alcun user con questo id </c:when>
 
 	<c:otherwise>
 		
@@ -177,9 +177,11 @@ FB.logout(function(response) {
 </p>
              <c:if test="${ empty question.text }" >
 	
-	<small><h5>Inserisci una nuova classifica! ora! </h5>
-	<h5>inserisci una nuova <a  href="topic.jsp"> classifica</a></h5>
-		<h5> o vota <a  href="SelectAllQuestionByDate"> una classifica già esistente</a> </h5>
+	<h4><em> Non esistono classifiche a tuo nome ....</em></h4>
+	<br></br>
+	<h5><strong>Inserisci subito una <a  href="topic.jsp"> nuova classifica</a></strong></h5>
+	<br></br>
+		<h5> <strong>Oppure vota <a  href="SelectAllQuestionByDate"> una classifica già esistente</a></strong> </h5>
 	</small>
 
 </form>

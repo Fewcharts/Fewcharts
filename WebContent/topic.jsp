@@ -141,13 +141,13 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Topic
-                    <small>Write your chart now!</small>
+                <h1 class="page-header">La tua Classifica
+                    <small>fai votare i tuoi amici</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Home</a>
                     </li>
-                    <li class="active">Topic</li>
+                    <li class="active">Classifica</li>
                 </ol>
             </div>
         </div>
@@ -172,7 +172,7 @@
             <div class="col-md-8">
             <div class="controls">
            <form action = "CheckUtenteLoggato" method= "POST" >
-                <h3>Theme of your chart: </h3>
+                <h3>Di cosa parla la tua classifica? </h3>
                                  
                             <p class="help-block"></p>
                         
@@ -180,13 +180,13 @@
                 
                     <div class="control-group form-group">
                         <div class="controls">
-                                 <label for="topic">Chart:</label>
-                      <textarea maxlength="100" placeholder= " ad Es. Ten best Mozart symphonies (in 180 characters!!)" name= topic rows="5" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                 <label for="topic">Classifica:</label>
+                      <textarea maxlength="100" placeholder= " ad Es. Le migliori sinfonie di Mozart ( ricordati che hai a disposizione 180 caratteri)" name= topic rows="5" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                         </div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button id="submit" type="submit" class="btn btn-primary" >Publish it !</button>
+                    <button id="submit" type="submit" class="btn btn-primary" >Pubblica !</button>
                    </form>
                     </div>
    

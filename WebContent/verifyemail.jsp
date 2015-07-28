@@ -110,7 +110,7 @@
 <div class="container">
 <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"> Check your email account and verify your email
+                <h1 class="page-header"> Verifica la tua casella email, ti abbiamo inviato un messaggio!
   
  
 </body>                 
